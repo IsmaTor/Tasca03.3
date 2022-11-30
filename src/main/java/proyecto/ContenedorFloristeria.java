@@ -1,0 +1,40 @@
+package proyecto;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ContenedorFloristeria {
+	
+	static Scanner entrada = new Scanner(System.in);
+	
+	private static ArrayList<Floristeria> contenedor = new ArrayList<Floristeria>();
+
+	//metodo crear floristeria
+	public static void crearFloristeria(Floristeria floristeria1) {
+		
+		String nombre;
+		
+		System.out.println("Introducir nombre para la nueva floristeria: ");
+		nombre = entrada.next();
+		
+		for ( int i = 0; i < contenedor.size(); i++) {
+			
+			while(contenedor.get(i).getNombre().equals(nombre)) {
+			
+				if (contenedor.get(i).getNombre().equalsIgnoreCase(nombre)) {
+				System.out.println("El nombre introducido ya existe.");
+				
+				System.out.println("Introducir el nombre para la nueva floristeria: ");
+				nombre = entrada.next();
+				} 
+			}
+		}
+		
+		floristeria1 = new Floristeria(nombre);
+		
+		contenedor.add(floristeria1);
+		
+		System.out.println(floristeria1.getNombre());
+		
+	}
+}
