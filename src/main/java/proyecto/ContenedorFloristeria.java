@@ -9,12 +9,12 @@ public class ContenedorFloristeria {
 	
 	private static ArrayList<Floristeria> contenedor = new ArrayList<Floristeria>();
 
-	//metodo crear floristeria
+	//metodo crear floristería
 	public static void crearFloristeria(Floristeria floristeria1) {
 		
 		String nombre;
 		
-		System.out.println("Introducir nombre para la nueva floristeria: ");
+		System.out.println("Introducir nombre para la nueva floristería: ");
 		nombre = entrada.next();
 		
 		for ( int i = 0; i < contenedor.size(); i++) {
@@ -24,7 +24,7 @@ public class ContenedorFloristeria {
 				if (contenedor.get(i).getNombre().equalsIgnoreCase(nombre)) {
 				System.out.println("El nombre introducido ya existe.");
 				
-				System.out.println("Introducir el nombre para la nueva floristeria: ");
+				System.out.println("Introducir el nombre para la nueva floristería: ");
 				nombre = entrada.next();
 				} 
 			}
@@ -34,7 +34,7 @@ public class ContenedorFloristeria {
 		
 		contenedor.add(floristeria1);
 		
-		System.out.println(floristeria1.getNombre());
+		System.out.println("La floristería " + floristeria1.getNombre() + " se ha creado correctamente.");
 		
 	}
 }
